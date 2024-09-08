@@ -1,8 +1,12 @@
 # ProyectoEda
 Para poder descargar los archivos, debes de hace primero un fork
+
 ![image](https://github.com/user-attachments/assets/1196d31d-5730-4976-b805-24bc161bbf75)
+
 esto hace que copies el repositorio en tus repositorios de tu cuenta
-Despues, descarga git bash
+
+Despues, descarga git bash\n
+
 una vez descargado ,para trabajar con el repositorio que quieras, tienes que irte a una carpet vacía
 en esa carpeta vacía, utilizas el comando "git clone []" y, sin reemplazando los corchetes el link del repositorio
 ejemplo:
