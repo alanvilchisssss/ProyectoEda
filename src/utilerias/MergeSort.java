@@ -31,14 +31,15 @@ public class MergeSort {
 
         //Compara los valores y los intercambia
         while (i < n1 && j < n2) {
+            contador[0]++;
             if (L[i] <= R[j]) {
                 arr[k] = L[i];
                 i++;
-                contador[0]++;
+                //contador[0]++;
             } else {
                 arr[k] = R[j];
                 j++;
-                contador[0]++;
+                //contador[0]++;
             }
             k++;
             //contador[0]++;
@@ -66,17 +67,20 @@ public class MergeSort {
         //Utilerias.printSubArray(arr, left, right);
     }
 
-    public static int mergeSort(int arr[], int left, int right) {
-        int[] contador=new int[5];
-        int suma=0;
+    public static int mergeSort(int arr[], int left, int right, int[] contador) {
+        //int[] contador=new int[5];
+        //int suma=0;
         if (left < right) {
+            contador[0]++;
             int mid = (left + right) / 2;
-
-            suma+=mergeSort(arr, left, mid);
-            suma+=mergeSort(arr, mid + 1, right);
-            suma+=merge(arr, left, mid, right,contador);
+            mergeSort(arr, left, mid,contador);
+            mergeSort(arr, mid + 1, right,contador);
+            merge(arr, left, mid, right,contador);
+            /*suma+=mergeSort(arr, left, mid,contador);
+            suma+=mergeSort(arr, mid + 1, right,contador);
+            suma+=merge(arr, left, mid, right,contador);*/
         }
         
-            return suma;
+            return contador[0];
     }
 }

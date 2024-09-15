@@ -34,7 +34,7 @@ public class Utilerias {
         int i=0;
         //System.out.println("Arreglo de "+n+" unidades:");
         for(i=0; i<n;i++){
-            arr[i]=Aleatorio(10000);
+            arr[i]=Aleatorio(100000);
             //System.out.print("["+arr[i]+"]");
         }
         System.out.println("\n");

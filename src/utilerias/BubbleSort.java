@@ -7,8 +7,8 @@ public class BubbleSort {
         int j=0;
         int contador=0;
         boolean valor=true;
-        System.out.println("\n*******************\n");
-        System.out.println("Algoritmo Bubblesort\n\n");
+        //System.out.println("\n*******************\n");
+        //System.out.println("Algoritmo Bubblesort\n\n");
         for(j=0; j<n-1; j++){
             if(lista[j]>lista[j+1]){
                 valor=true;
@@ -39,10 +39,10 @@ public class BubbleSort {
                 //Utilerias.imprimirArreglo(lista);
             }
         }
-        if(valor==false){
+        /*if(valor==false){
             System.out.println("\n\n  *****************************El arreglo ordenado es:************\n");
             Utilerias.imprimirArreglo(lista);
-        }
+        }*/
         return comparaciones;
     }
 }

@@ -76,6 +76,7 @@ public class PuntoDeEntrada {
     }
     public static void OperacionesMergeSort(Scanner scanner){
         System.out.println("Algoritmo Counting");
+        int[] contador=new int[5];
 
         int[] arreglo1=new int[50];
         int[] arreglo2=new int[100];
@@ -94,6 +95,7 @@ public class PuntoDeEntrada {
         
         
         for(int i=0; i<5;i++){
+            contador[0]=0;
             Utilerias.ArregloAleatorio(arreglo1, arreglo1.length, scanner);
             Utilerias.ArregloAleatorio(arreglo2, arreglo2.length, scanner);
             Utilerias.ArregloAleatorio(arreglo3, arreglo3.length, scanner);
@@ -101,13 +103,13 @@ public class PuntoDeEntrada {
             Utilerias.ArregloAleatorio(arreglo5, arreglo5.length, scanner);
             Utilerias.ArregloAleatorio(arreglo6, arreglo6.length, scanner);
             Utilerias.ArregloAleatorio(arreglo7, arreglo7.length, scanner);
-            a[i]=MergeSort.mergeSort(arreglo1,0,arreglo1.length-1);
-            b[i]=MergeSort.mergeSort(arreglo2,0,arreglo2.length-1);
-            c[i]=MergeSort.mergeSort(arreglo3,0,arreglo3.length-1);
-            d[i]=MergeSort.mergeSort(arreglo4,0,arreglo4.length-1);
-            e[i]=MergeSort.mergeSort(arreglo5,0,arreglo5.length-1);
-            f[i]=MergeSort.mergeSort(arreglo6,0,arreglo6.length-1);
-            g[i]=MergeSort.mergeSort(arreglo7,0,arreglo7.length-1);
+            a[i]=MergeSort.mergeSort(arreglo1,0,arreglo1.length-1,contador);
+            b[i]=MergeSort.mergeSort(arreglo2,0,arreglo2.length-1,contador);
+            c[i]=MergeSort.mergeSort(arreglo3,0,arreglo3.length-1,contador);
+            d[i]=MergeSort.mergeSort(arreglo4,0,arreglo4.length-1,contador);
+            e[i]=MergeSort.mergeSort(arreglo5,0,arreglo5.length-1,contador);
+            f[i]=MergeSort.mergeSort(arreglo6,0,arreglo6.length-1,contador);
+            g[i]=MergeSort.mergeSort(arreglo7,0,arreglo7.length-1,contador);
         }
         imprimirArreglos(arreglo1, arreglo2, arreglo3, arreglo4, arreglo5, arreglo6, arreglo7, a, b, c, d, e, f, g);
     }
