@@ -5,7 +5,6 @@ public class countingsort {
     public static int AlgoritmoCounting(int[] arr){
         int comparaciones[]=new int[arr.length];
         int suma=0;
-        //Este algoritmo no utiliza intercambios
         int j=0;
         int elem=0;
         int n=arr.length;
@@ -20,32 +19,18 @@ public class countingsort {
             comparaciones[0]++;
         }
         
-        //System.out.println("Arreglo con conteos(count):");
-        //Utilerias.imprimirArreglo(count);
-        //System.out.println("\n");
         for(int i=1; i<=max;i++){
             count[i]=count[i]+count[i-1];
             comparaciones[0]++;
         }
 
-        //System.out.println("Arreglo con índices supuestos(count):");
-        //Utilerias.imprimirArreglo(count);
-        //System.out.println("\n");
         for(int i=0; i<count.length; i++){
             count[i]-=1;
         }
-        //System.out.println("Arreglo con índices fieles a la trama:");
-        //Utilerias.imprimirArreglo(count);
-        //System.out.println("\n");
-        //System.out.println("********iteraciones*************");
         for(j=n; j>0;j--){
             int temp=arr[j-1];
             restore(count[temp],arr,coleccion,j, comparaciones);
-            //Utilerias.imprimirArreglo(coleccion);
         }
-        //System.out.println("************************");
-        //System.out.println("Colección auxiliar ordenada(coleccion):");
-        //Utilerias.imprimirArreglo(coleccion);
 
         for(int i=0; i<n; i++){
             arr[i]=coleccion[i];
@@ -73,7 +58,6 @@ public class countingsort {
     }
     public static void restore(int count, int[] arr,int[] coleccion, int j, int[] comparaciones){
         int temp=arr[j-1];
-        //System.out.println(temp);
         if(temp==0){
             coleccion[0]=0;
             comparaciones[2]++;
