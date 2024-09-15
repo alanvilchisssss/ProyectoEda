@@ -66,30 +66,42 @@ public class Utilerias {
         }
         System.out.println("\n");
     }
-    public static void BuildHeap(int[] arr){
+    public static int BuildHeap(int[] arr){
+        int suma=0;
         int n=arr.length-1;
         int i;
-        System.out.println("\n Construcción del heap:\n");
+        //System.out.println("\n Construcción del heap:\n");
         for(i =n/2; i>=0;i--){
-            Heapify(arr,i,n+1,n);
-            imprimirArreglo(arr);
-            System.out.println("Termino de construcción del heap.");
+            suma+=Heapify(arr,i,n+1,n);
+            //imprimirArreglo(arr);
+            //System.out.println("Termino de construcción del heap.");
         }
+        return suma;
     }
-    public static void Heapify(int[] arr, int i,int size, int heapSize){
+    public static int Heapify(int[] arr, int i,int size, int heapSize){
+        int comparaciones=0;
+        int intercambios=0;
+        int inserciones=0;
         int l=2*i+1;
         int r = 2 * i + 2;
 	    int largest;
-        if(l <= heapSize && arr[l] > arr[i])
+        if(l <= heapSize && arr[l] > arr[i]){
+            comparaciones ++;
     	    largest = l;
-  	    else
+        }else{
     	    largest = i;
-  	    if(r <= heapSize && arr[r] > arr[largest])
+        }
+  	    if(r <= heapSize && arr[r] > arr[largest]){
+            comparaciones++;
     	    largest = r;
+        }
   	    if(largest != i){
             swap(arr,i,largest);
+            intercambios++;
     	    Heapify(arr, largest,size,heapSize);
         }
+        inserciones++;
+        return inserciones+intercambios+comparaciones;
     }
     public static void menu(Scanner scanner){
         int opcion=0;
