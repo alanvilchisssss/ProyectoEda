@@ -67,20 +67,17 @@ public class MergeSort {
         //Utilerias.printSubArray(arr, left, right);
     }
 
-    public static int mergeSort(int arr[], int left, int right, int[] contador) {
-        //int[] contador=new int[5];
-        //int suma=0;
+    public static int mergeSort(int arr[], int left, int right) {
+        int[] contador=new int[5];
+        int suma=0;
         if (left < right) {
-            contador[0]++;
             int mid = (left + right) / 2;
-            mergeSort(arr, left, mid,contador);
-            mergeSort(arr, mid + 1, right,contador);
-            merge(arr, left, mid, right,contador);
-            /*suma+=mergeSort(arr, left, mid,contador);
-            suma+=mergeSort(arr, mid + 1, right,contador);
-            suma+=merge(arr, left, mid, right,contador);*/
+
+            suma+=mergeSort(arr, left, mid);
+            suma+=mergeSort(arr, mid + 1, right);
+            suma+=merge(arr, left, mid, right,contador);
         }
         
-            return contador[0];
+            return suma;
     }
 }
