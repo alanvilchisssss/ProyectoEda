@@ -44,6 +44,7 @@ public class countingsort {
         int temp=0;
         int j=1;
         for(int i=0; i<arr.length-1;i++){
+            
             if(arr[i]>arr[j] && arr[i]>temp){
                 temp=arr[i];
                 comparaciones[1]++;

@@ -261,31 +261,64 @@ public class PuntoDeEntrada {
     public static void imprimirOperaciones(int[] arr,int[] arreglo1){
         System.out.println("Para "+arreglo1.length+" son"+Arrays.toString(arr)+" operaciones");
     }
+    public static void imprimirSumasYPromedios(int[] arr,float[]arr2,int[] arreglo1, int i){
+        System.out.println("Para "+arreglo1.length+" la suma es: ["+arr[i]+"] y en promedio: ["+String.format("%.2f", arr2[i])+"]");
+    }
     public static void imprimirArreglos(int[]arreglo1,int[]arreglo2,int[]arreglo3,int[]arreglo4,int[]arreglo5,int[]arreglo6,int[]arreglo7,int[] a,int[] b,int[] c,int[] d,int[] e, int[] f,int[] g){
         System.out.println("Arreglos ordenados:");
         System.out.println("Arreglo 1");
         System.out.println(Arrays.toString(arreglo1));
-        
+        int[] suma=new int[7];
+        int i=0;
+        for(int valor : a){
+            suma[i]+=valor;
+        }
+        float[] promedio=new float[7];
+        promedio[i]=suma[i]/5;
+        i++;
         System.out.println("Arreglo 2");
         System.out.println(Arrays.toString(arreglo2));
-        
+        for(int valor : b){
+            suma[i]+=valor;
+        }
+        promedio[i]=suma[i]/5;
+        i++;
         System.out.println("Arreglo 3");
         System.out.println(Arrays.toString(arreglo3));
-        
-        
+        for(int valor : c){
+            suma[i]+=valor;
+        }
+        promedio[i]=suma[i]/5;
+        i++;
         System.out.println("Arreglo 4");
         System.out.println(Arrays.toString(arreglo4));
-        
+        for(int valor : d){
+            suma[i]+=valor;
+        }
+        promedio[i]=suma[i]/5;
+        i++;
         System.out.println("Arreglo 5");
         System.out.println(Arrays.toString(arreglo5));
-
+        for(int valor : e){
+            suma[i]+=valor;
+        }
+        promedio[i]=suma[i]/5;
+        i++;
         
         System.out.println("Arreglo 6");
         System.out.println(Arrays.toString(arreglo6));
-        
+        for(int valor : f){
+            suma[i]+=valor;
+        }
+        promedio[i]=suma[i]/5;
+        i++;
         System.out.println("Arreglo 7");
         System.out.println(Arrays.toString(arreglo7));
-
+        for(int valor : g){
+            suma[i]+=valor;
+        }
+        promedio[i]=suma[i]/5;
+        i++;
         System.out.println("El numero total de operaciones para el algoritmo dependiendo de la cantidad de datos: ");
         imprimirOperaciones(a,arreglo1);
         imprimirOperaciones(b,arreglo2);
@@ -294,6 +327,16 @@ public class PuntoDeEntrada {
         imprimirOperaciones(e,arreglo5);
         imprimirOperaciones(f,arreglo6);
         imprimirOperaciones(g,arreglo7);
+        System.out.println("*****SUMAS Y PROMEDIOS*****");
+        imprimirSumasYPromedios(suma, promedio, arreglo1,0);
+        imprimirSumasYPromedios(suma, promedio, arreglo2,1);
+        imprimirSumasYPromedios(suma, promedio, arreglo3,2);
+        imprimirSumasYPromedios(suma, promedio, arreglo4,3);
+        imprimirSumasYPromedios(suma, promedio, arreglo5,4);
+        imprimirSumasYPromedios(suma, promedio, arreglo6,5);
+        imprimirSumasYPromedios(suma, promedio, arreglo7,6);
+
+
     }
     
 }
