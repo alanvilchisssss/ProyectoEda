@@ -98,7 +98,7 @@ public class Utilerias {
   	    if(largest != i){
             swap(arr,i,largest);
             intercambios++;
-    	    Heapify(arr, largest,size,heapSize);
+    	    comparaciones+=Heapify(arr, largest,size,heapSize);
         }
         inserciones++;
         return inserciones+intercambios+comparaciones;
