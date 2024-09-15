@@ -111,6 +111,153 @@ public class PuntoDeEntrada {
         }
         imprimirArreglos(arreglo1, arreglo2, arreglo3, arreglo4, arreglo5, arreglo6, arreglo7, a, b, c, d, e, f, g);
     }
+    public static void  operacionesQuickSort(Scanner scanner){
+        System.out.println("Algoritmo QuickSort");
+
+        int[] arreglo1=new int[50];
+        int[] arreglo2=new int[100];
+        int[] arreglo3=new int[800];
+        int[] arreglo4=new int[1000];
+        int[] arreglo5=new int[2000];
+        int[] arreglo6=new int[5000];
+        int[] arreglo7=new int[10000];
+        int[] a=new int[5];
+        int[] b=new int[5];
+        int[] c=new int[5];
+        int[] d=new int[5];
+        int[] e=new int[5];
+        int[] f=new int[5];
+        int[] g=new int[5];
+        for(int i=0; i<5;i++){
+            Utilerias.ArregloAleatorio(arreglo1, arreglo1.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo2, arreglo2.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo3, arreglo3.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo4, arreglo4.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo5, arreglo5.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo6, arreglo6.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo7, arreglo7.length, scanner);
+            quicksort.reinciar();
+            a[i]=quicksort.Quicksort(arreglo1,0,arreglo1.length-1);
+            quicksort.reinciar();
+            b[i]=quicksort.Quicksort(arreglo2,0,arreglo2.length-1);
+            quicksort.reinciar();
+            c[i]=quicksort.Quicksort(arreglo3,0,arreglo3.length-1);
+            quicksort.reinciar();
+            d[i]=quicksort.Quicksort(arreglo4,0,arreglo4.length-1);
+            quicksort.reinciar();
+            e[i]=quicksort.Quicksort(arreglo5,0,arreglo5.length-1);
+            quicksort.reinciar();
+            f[i]=quicksort.Quicksort(arreglo6,0,arreglo6.length-1);
+            quicksort.reinciar();
+            g[i]=quicksort.Quicksort(arreglo7,0,arreglo7.length-1);
+            quicksort.reinciar();
+        }
+        imprimirArreglos(arreglo1, arreglo2, arreglo3, arreglo4, arreglo5, arreglo6, arreglo7, a, b, c, d, e, f, g);
+    }
+    public static void  operacionesHeapSort(Scanner scanner){
+        System.out.println("Algoritmo HeapSort");
+
+        int[] arreglo1=new int[50];
+        int[] arreglo2=new int[100];
+        int[] arreglo3=new int[800];
+        int[] arreglo4=new int[1000];
+        int[] arreglo5=new int[2000];
+        int[] arreglo6=new int[5000];
+        int[] arreglo7=new int[10000];
+        int[] a=new int[5];
+        int[] b=new int[5];
+        int[] c=new int[5];
+        int[] d=new int[5];
+        int[] e=new int[5];
+        int[] f=new int[5];
+        int[] g=new int[5];
+        for(int i=0; i<5;i++){
+            Utilerias.ArregloAleatorio(arreglo1, arreglo1.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo2, arreglo2.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo3, arreglo3.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo4, arreglo4.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo5, arreglo5.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo6, arreglo6.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo7, arreglo7.length, scanner);
+            a[i]=heapsort.HeapSort(arreglo1);
+            b[i]=heapsort.HeapSort(arreglo2);
+            c[i]=heapsort.HeapSort(arreglo3);
+            d[i]=heapsort.HeapSort(arreglo4);
+            e[i]=heapsort.HeapSort(arreglo5);
+            f[i]=heapsort.HeapSort(arreglo6);
+            g[i]=heapsort.HeapSort(arreglo7);
+        }
+        imprimirArreglos(arreglo1, arreglo2, arreglo3, arreglo4, arreglo5, arreglo6, arreglo7, a, b, c, d, e, f, g);
+    }
+    public static void  operacionesInsertionSort(Scanner scanner){
+        System.out.println("Algoritmo InsertionSort");
+
+        int[] arreglo1=new int[50];
+        int[] arreglo2=new int[100];
+        int[] arreglo3=new int[800];
+        int[] arreglo4=new int[1000];
+        int[] arreglo5=new int[2000];
+        int[] arreglo6=new int[5000];
+        int[] arreglo7=new int[10000];
+        int[] a=new int[5];
+        int[] b=new int[5];
+        int[] c=new int[5];
+        int[] d=new int[5];
+        int[] e=new int[5];
+        int[] f=new int[5];
+        int[] g=new int[5];
+        for(int i=0; i<5;i++){
+            Utilerias.ArregloAleatorio(arreglo1, arreglo1.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo2, arreglo2.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo3, arreglo3.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo4, arreglo4.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo5, arreglo5.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo6, arreglo6.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo7, arreglo7.length, scanner);
+            a[i]=InsertionSort.insertionSort(arreglo1);
+            b[i]=InsertionSort.insertionSort(arreglo2);
+            c[i]=InsertionSort.insertionSort(arreglo3);
+            d[i]=InsertionSort.insertionSort(arreglo4);
+            e[i]=InsertionSort.insertionSort(arreglo5);
+            f[i]=InsertionSort.insertionSort(arreglo6);
+            g[i]=InsertionSort.insertionSort(arreglo7);
+        }
+        imprimirArreglos(arreglo1, arreglo2, arreglo3, arreglo4, arreglo5, arreglo6, arreglo7, a, b, c, d, e, f, g);
+    }
+    public static void  operacionesSelectionSort(Scanner scanner){
+        System.out.println("Algoritmo SelectionSort");
+        int[] arreglo1=new int[50];
+        int[] arreglo2=new int[100];
+        int[] arreglo3=new int[800];
+        int[] arreglo4=new int[1000];
+        int[] arreglo5=new int[2000];
+        int[] arreglo6=new int[5000];
+        int[] arreglo7=new int[10000];
+        int[] a=new int[5];
+        int[] b=new int[5];
+        int[] c=new int[5];
+        int[] d=new int[5];
+        int[] e=new int[5];
+        int[] f=new int[5];
+        int[] g=new int[5];
+        for(int i=0; i<5;i++){
+            Utilerias.ArregloAleatorio(arreglo1, arreglo1.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo2, arreglo2.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo3, arreglo3.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo4, arreglo4.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo5, arreglo5.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo6, arreglo6.length, scanner);
+            Utilerias.ArregloAleatorio(arreglo7, arreglo7.length, scanner);
+            a[i]=SelectionSort.selectionSort(arreglo1);
+            b[i]=SelectionSort.selectionSort(arreglo2);
+            c[i]=SelectionSort.selectionSort(arreglo3);
+            d[i]=SelectionSort.selectionSort(arreglo4);
+            e[i]=SelectionSort.selectionSort(arreglo5);
+            f[i]=SelectionSort.selectionSort(arreglo6);
+            g[i]=SelectionSort.selectionSort(arreglo7);
+        }
+        imprimirArreglos(arreglo1, arreglo2, arreglo3, arreglo4, arreglo5, arreglo6, arreglo7, a, b, c, d, e, f, g);
+    }
     public static void imprimirOperaciones(int[] arr,int[] arreglo1){
         System.out.println("Para "+arreglo1.length+" son"+Arrays.toString(arr)+" operaciones");
     }

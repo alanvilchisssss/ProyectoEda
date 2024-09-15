@@ -108,19 +108,19 @@ public class Utilerias {
 
             switch(opcion){
                 case 1->{
-
+                    PuntoDeEntrada.operacionesInsertionSort(scanner);
                 }
                 case 2->{
-                    
+                   PuntoDeEntrada.operacionesSelectionSort(scanner);
                 }
                 case 3->{
                     PuntoDeEntrada.OperacionesBubbleSort(scanner);
                 }
                 case 4->{
-                    
+                    PuntoDeEntrada.operacionesQuickSort(scanner);
                 }
                 case 5->{
-                    
+                    PuntoDeEntrada.operacionesHeapSort(scanner);
                 }
                 case 6->{
                     PuntoDeEntrada.OperacionesMergeSort(scanner);
