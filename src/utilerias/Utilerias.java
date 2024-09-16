@@ -70,11 +70,8 @@ public class Utilerias {
         int suma=0;
         int n=arr.length-1;
         int i;
-        //System.out.println("\n Construcción del heap:\n");
         for(i =n/2; i>=0;i--){
             suma+=Heapify(arr,i,n+1,n);
-            //imprimirArreglo(arr);
-            //System.out.println("Termino de construcción del heap.");
         }
         return suma;
     }

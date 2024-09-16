@@ -42,7 +42,6 @@ public class MergeSort {
                 contador[0]++;
             }
             k++;
-            //contador[0]++;
         }
 
         //En caso de que se queden sin elementos se copia el sobrante de la lista.
